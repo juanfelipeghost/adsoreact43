@@ -145,3 +145,25 @@ function getBook(id) {
 const books= getBooks();
 books;
 
+const book = getBook(3);
+book;
+/*const title = book.title;
+title;
+const author = book.author;
+author;
+*/
+// destructuring
+const { title, author ,genres} = book;
+console.log(title, author,genres);
+//const primaryGenre = genres[1];
+//primaryGenre;
+const [primaryGenre,...otherGenres] = genres;
+console.log(primaryGenre,otherGenres);
+const newGenres = ["epic fantasy",...genres];
+newGenres;
+const updatedBook = {
+  ...book,
+  moviePublicationDate: "2001-12-19",
+  pages: 1210,
+};
+updatedBook;
